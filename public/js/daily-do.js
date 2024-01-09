@@ -1,0 +1,1 @@
+$((function(){"use strict";BDashboard.loadWidget($("#widget_daily_do").find(".widget-content"),route("daily-do.widget.todo-list"))}));
