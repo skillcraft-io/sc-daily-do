@@ -15,7 +15,7 @@ This plugin was developed to address the need for a streamlined daily task manag
 ## Requirements
 
 - Botble core 7.1.0 or higher.
-- Skillcraft Core Plugin - v1.0.0
+- Skillcraft Core Plugin - v1.1.0
 
 ## Installation
 
