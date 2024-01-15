@@ -16,13 +16,12 @@ class HookServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {
+        (new DailyDoManager)->load();
+
         $this->app['events']->listen(RenderingDashboardWidgets::class, function () {
             add_filter(DASHBOARD_FILTER_ADMIN_LIST, [$this, 'registerDashboardWidgets'], 21, 2);
         });
-
-        (new DailyDoManager)->load();
-
-
+        
         add_action(ACTION_HOOK_SKILLCRAFT_CORE_MODEL_AFTER_CREATED, function (CoreModel $model) {
             (new SyncDailyDoAction())->handle($model);
         }, 1, 1);
