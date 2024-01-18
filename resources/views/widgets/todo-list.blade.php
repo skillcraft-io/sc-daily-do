@@ -11,7 +11,7 @@
                     {{ trans('core/base::tables.description') }}
                 </x-core::table.header.cell>
                 <x-core::table.header.cell class="text-end">
-                    {{ trans('plugins/daily-do::daily-do.tables.due_date') }}
+                    {{ trans('plugins/sc-daily-do::daily-do.tables.due_date') }}
                 </x-core::table.header.cell>
             </x-core::table.header>
 
@@ -20,7 +20,7 @@
                 @foreach ($todos as $todo)
                     <x-core::table.body.row>
                         <x-core::table.body.cell >
-                            <div class="btn btn-success btn-sm " title="{{ trans('plugins/daily-do::daily-do.mark_as_complete') }}" >
+                            <div class="btn btn-success btn-sm " title="{{ trans('plugins/sc-daily-do::daily-do.mark_as_complete') }}" >
                                 <i class="fas fa-check" id="myDailyDo" data-dailytask="{{ $todo->id }}"></i>
                             </div>
                         </x-core::table.body.cell>
@@ -48,7 +48,7 @@
                 </div>
             </div>
             <x-slot:footer>
-                <div class="btn btn-success" title="{{ trans('plugins/daily-do::daily-do.mark_as_complete') }}" data-bs-dismiss="modal">
+                <div class="btn btn-success" title="{{ trans('plugins/sc-daily-do::daily-do.mark_as_complete') }}" data-bs-dismiss="modal">
                         <i class="fas fa-check" id="myDailyDo" data-dailytask="{{ $todo->id }}"></i>
                 </div>
             </x-slot:footer>
@@ -60,7 +60,7 @@
     </div>
 @else
     <x-core::empty-state
-        :title="trans('plugins/daily-do::daily-do.no_new_tasks_title')"
-        :subtitle="trans('plugins/daily-do::daily-do.no_new_tasks_now')"
+        :title="trans('plugins/sc-daily-do::daily-do.no_new_tasks_title')"
+        :subtitle="trans('plugins/sc-daily-do::daily-do.no_new_tasks_now')"
     />
 @endif

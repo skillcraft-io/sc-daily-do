@@ -20,14 +20,14 @@ class DailyDoController extends BaseController
 {
     public function index(DailyDoTable $table)
     {
-        PageTitle::setTitle(trans('plugins/daily-do::daily-do.name'));
+        PageTitle::setTitle(trans('plugins/sc-daily-do::daily-do.name'));
 
         return $table->renderTable();
     }
 
     public function create(FormBuilder $formBuilder)
     {
-        PageTitle::setTitle(trans('plugins/daily-do::daily-do.create'));
+        PageTitle::setTitle(trans('plugins/sc-daily-do::daily-do.create'));
 
         return $formBuilder->create(DailyDoForm::class)->renderForm();
     }
@@ -113,6 +113,6 @@ class DailyDoController extends BaseController
 
         return $this
             ->httpResponse()
-            ->setData(view('plugins/daily-do::widgets.todo-list', compact('todos', 'limit'))->render());
+            ->setData(view('plugins/sc-daily-do::widgets.todo-list', compact('todos', 'limit'))->render());
     }
 }

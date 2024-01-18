@@ -12,12 +12,16 @@ class DailyDoServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
+        if (!is_plugin_active('sc-core')) {
+            return;
+        }
+
         $this->app->register(CommandServiceProvider::class);
 
         $this->app->register(EventServiceProvider::class);
 
         $this
-            ->setNamespace('plugins/daily-do')
+            ->setNamespace('plugins/sc-daily-do')
             ->loadHelpers()
             ->loadAndPublishConfigurations(['permissions', 'general'])
             ->loadMigrations()
@@ -31,7 +35,7 @@ class DailyDoServiceProvider extends ServiceProvider
                 'id' => 'cms-plugins-daily-do',
                 'priority' => 4,
                 'parent_id' => null,
-                'name' => 'plugins/daily-do::daily-do.name',
+                'name' => 'plugins/sc-daily-do::daily-do.name',
                 'icon' => 'ti ti-checklist',
                 'url' => route('daily-do.index'),
                 'permissions' => ['daily-do.index'],

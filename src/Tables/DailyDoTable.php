@@ -92,7 +92,7 @@ class DailyDoTable extends TableAbstract
                 'validate' => 'required|max:100',
             ],
             'is_completed' => [
-                'title' => trans('plugins/daily-do::daily-do.forms.is_completed'),
+                'title' => trans('plugins/sc-daily-do::daily-do.forms.is_completed'),
                 'type' => 'select',
                 'choices' => [
                     1 => trans('core/base::base.yes'),
@@ -101,7 +101,7 @@ class DailyDoTable extends TableAbstract
                 'validate' => 'required|boolean',
             ],
             'due_date' => [
-                'title' => trans('plugins/daily-do::daily-do.forms.due_date'),
+                'title' => trans('plugins/sc-daily-do::daily-do.forms.due_date'),
                 'type' => 'date',
             ],
         ];

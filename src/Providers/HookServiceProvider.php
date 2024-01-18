@@ -37,12 +37,12 @@ class HookServiceProvider extends ServiceProvider
             return $widgets;
         }
 
-        Assets::addScriptsDirectly(['/vendor/core/plugins/daily-do/js/daily-do.js']);
+        Assets::addScriptsDirectly(['/vendor/core/plugins/sc-daily-do/js/daily-do.js']);
 
         return (new DashboardWidgetInstance())
             ->setPermission('daily-do.index')
             ->setKey('widget_daily_do')
-            ->setTitle(trans('plugins/daily-do::daily-do.widget_daily_do'))
+            ->setTitle(trans('plugins/sc-daily-do::daily-do.widget_daily_do'))
             ->setIcon('fas fa-edit')
             ->setColor('yellow')
             ->setRoute(route('daily-do.widget.todo-list'))

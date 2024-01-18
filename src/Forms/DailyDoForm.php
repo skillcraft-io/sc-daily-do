@@ -40,7 +40,7 @@ class DailyDoForm extends FormAbstract
                 'due_date',
                 DatePickerField::class,
                 DatePickerFieldOption::make()
-                ->label(trans('plugins/daily-do::daily-do.forms.due_date'))
+                ->label(trans('plugins/sc-daily-do::daily-do.forms.due_date'))
                 ->placeholder(trans('core/base::forms.due_date_placeholder'))
                 ->toArray()
             )
@@ -48,7 +48,7 @@ class DailyDoForm extends FormAbstract
                 'is_completed',
                 OnOffCheckboxField::class,
                 OnOffFieldOption::make()
-                ->label(trans('plugins/daily-do::daily-do.forms.is_completed'))
+                ->label(trans('plugins/sc-daily-do::daily-do.forms.is_completed'))
                 ->value(0)
                 ->toArray()
             )

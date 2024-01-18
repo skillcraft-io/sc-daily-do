@@ -1,6 +1,5 @@
 ## Daily Do Task Manager Plugin for Your Website
 
-
 This plugin was developed to address the need for a streamlined daily task management solution for businesses, specifically designed to integrate seamlessly into your website. Say goodbye to the hassle of external task management systems and embrace this simple yet powerful daily task checklist.
 
 ## Key Features
@@ -15,11 +14,16 @@ This plugin was developed to address the need for a streamlined daily task manag
 ## Requirements
 
 - Botble core 7.1.0 or higher.
-- Skillcraft Core Plugin - v1.1.0
+- Skillcraft Core Plugin - v2.0.0
 
 ## Installation
 
 **Install via Admin Panel**
+
+- Important:
+  "You need to disable the "Daily Do" plugin if previously installed. This re-release of the plugin has renmaed the folder to "sc-daily-do". 
+  
+  ##Do not use## the plugins remove button fromt he admin area, manually remove the folder and contents directly from the server. If you do not have any data, you can use the remove button.
 
 Go to the **Admin Panel** and click on the **Plugins** tab. Click on the "Add new" button, find the **Daily Dos** plugin and click on the "Install" button.
 
