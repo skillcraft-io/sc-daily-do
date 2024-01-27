@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Schema;
 return new class () extends Migration {
     public function up(): void
     {
-        if (!Schema::hasTable('daily_dos')) {
+        if (! Schema::hasTable('daily_dos')) {
             Schema::create('daily_dos', function (Blueprint $table) {
                 $table->id();
                 $table->nullableMorphs('module');

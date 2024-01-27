@@ -12,7 +12,7 @@ class DailyDoServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-        if (!is_plugin_active('sc-core')) {
+        if (! is_plugin_active('sc-core')) {
             return;
         }
 
@@ -31,15 +31,15 @@ class DailyDoServiceProvider extends ServiceProvider
 
         DashboardMenu::default()->beforeRetrieving(function () {
             DashboardMenu::make()
-            ->registerItem([
-                'id' => 'cms-plugins-daily-do',
-                'priority' => 4,
-                'parent_id' => null,
-                'name' => 'plugins/sc-daily-do::daily-do.name',
-                'icon' => 'ti ti-checklist',
-                'url' => route('daily-do.index'),
-                'permissions' => ['daily-do.index'],
-            ]);
+                ->registerItem([
+                    'id' => 'cms-plugins-daily-do',
+                    'priority' => 4,
+                    'parent_id' => null,
+                    'name' => 'plugins/sc-daily-do::daily-do.name',
+                    'icon' => 'ti ti-checklist',
+                    'url' => route('daily-do.index'),
+                    'permissions' => ['daily-do.index'],
+                ]);
         });
 
         $this->app->booted(function () {

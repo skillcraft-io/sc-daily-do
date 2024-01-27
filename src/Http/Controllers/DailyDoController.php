@@ -2,19 +2,19 @@
 
 namespace Skillcraft\DailyDo\Http\Controllers;
 
-use Skillcraft\DailyDo\Http\Requests\DailyDoRequest;
-use Skillcraft\DailyDo\Models\DailyDo;
-use Botble\Base\Facades\PageTitle;
-use Botble\Base\Http\Controllers\BaseController;
-use Illuminate\Http\Request;
-use Exception;
-use Skillcraft\DailyDo\Tables\DailyDoTable;
 use Botble\Base\Events\CreatedContentEvent;
 use Botble\Base\Events\DeletedContentEvent;
 use Botble\Base\Events\UpdatedContentEvent;
-use Botble\Base\Http\Responses\BaseHttpResponse;
-use Skillcraft\DailyDo\Forms\DailyDoForm;
+use Botble\Base\Facades\PageTitle;
 use Botble\Base\Forms\FormBuilder;
+use Botble\Base\Http\Controllers\BaseController;
+use Botble\Base\Http\Responses\BaseHttpResponse;
+use Exception;
+use Illuminate\Http\Request;
+use Skillcraft\DailyDo\Forms\DailyDoForm;
+use Skillcraft\DailyDo\Http\Requests\DailyDoRequest;
+use Skillcraft\DailyDo\Models\DailyDo;
+use Skillcraft\DailyDo\Tables\DailyDoTable;
 
 class DailyDoController extends BaseController
 {
@@ -82,11 +82,10 @@ class DailyDoController extends BaseController
     public function processCompletingDailyDo(Request $request, BaseHttpResponse $response)
     {
 
-        $dailyDo = (new DailyDo)
+        $dailyDo = (new DailyDo())
             ->query()
             ->where('id', (int) $request->input('data.task_id', 0))
             ->first();
-
 
         if ($dailyDo) {
             $dailyDo->is_completed = 1;
@@ -103,7 +102,7 @@ class DailyDoController extends BaseController
         $limit = $request->integer('paginate', 10);
         $limit = $limit > 0 ? $limit : 10;
 
-        $todos = (new DailyDo)->query()
+        $todos = (new DailyDo())->query()
             ->where('is_completed', false)
             ->where('due_date', '=', date('Y-m-d'))
             ->orderByDesc('due_date')

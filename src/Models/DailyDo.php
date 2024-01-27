@@ -3,8 +3,8 @@
 namespace Skillcraft\DailyDo\Models;
 
 use Botble\Base\Casts\SafeContent;
-use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Skillcraft\Core\Models\CoreModel;
 
 /**
@@ -13,7 +13,7 @@ use Skillcraft\Core\Models\CoreModel;
 class DailyDo extends CoreModel
 {
     use SoftDeletes;
-    
+
     protected $table = 'daily_dos';
 
     protected $fillable = [
@@ -29,11 +29,7 @@ class DailyDo extends CoreModel
         'title' => SafeContent::class,
         'is_completed' => 'boolean',
         'description' => SafeContent::class,
-    ];
-
-
-    protected $dates = [
-        'due_date',
+        'due_date' => 'date',
     ];
 
     public function module(): ?MorphTo

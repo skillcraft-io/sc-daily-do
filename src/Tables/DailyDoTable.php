@@ -4,7 +4,6 @@ namespace Skillcraft\DailyDo\Tables;
 
 use Botble\Base\Facades\BaseHelper;
 use Botble\Base\Facades\Html;
-use Skillcraft\DailyDo\Models\DailyDo;
 use Botble\Table\Abstracts\TableAbstract;
 use Botble\Table\Actions\DeleteAction;
 use Botble\Table\Actions\EditAction;
@@ -16,6 +15,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Database\Query\Builder as QueryBuilder;
 use Illuminate\Http\JsonResponse;
+use Skillcraft\DailyDo\Models\DailyDo;
 
 class DailyDoTable extends TableAbstract
 {
@@ -39,6 +39,7 @@ class DailyDoTable extends TableAbstract
                 if (! $this->hasPermission('daily-do.edit')) {
                     return BaseHelper::clean($item->name);
                 }
+
                 return Html::link(route('daily-do.edit', $item->getKey()), BaseHelper::clean($item->name));
             });
 

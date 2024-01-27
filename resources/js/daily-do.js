@@ -8,8 +8,7 @@ class DailyDos {
         $(document).on('click', '#myDailyDo', (e) => {
             const params = {}
             let current = $(e.currentTarget)
-            var dailyTaskId = current.data('dailytask');
-            params['task_id'] = dailyTaskId
+            params['task_id'] = current.data('dailytask')
             updateDailyDos(params)
         });
 
@@ -17,7 +16,7 @@ class DailyDos {
             $httpClient
                 .make()
                 .get(route('daily-do.complete'), { data: params })
-                .then(({ data }) => {
+                .then(() => {
                     BDashboard.loadWidget($('#widget_daily_do').find('.widget-content'), route('daily-do.widget.todo-list'))
                })
         }

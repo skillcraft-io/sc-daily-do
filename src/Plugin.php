@@ -2,8 +2,8 @@
 
 namespace Skillcraft\DailyDo;
 
-use Illuminate\Support\Facades\Schema;
 use Botble\PluginManagement\Abstracts\PluginOperationAbstract;
+use Illuminate\Support\Facades\Schema;
 
 class Plugin extends PluginOperationAbstract
 {
