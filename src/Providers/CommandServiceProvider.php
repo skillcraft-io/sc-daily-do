@@ -2,8 +2,8 @@
 
 namespace Skillcraft\DailyDo\Providers;
 
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Console\Scheduling\Schedule;
+use Illuminate\Support\ServiceProvider;
 use Skillcraft\DailyDo\Commands\ImportDailyDoCommand;
 
 class CommandServiceProvider extends ServiceProvider

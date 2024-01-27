@@ -2,8 +2,8 @@
 
 namespace Skillcraft\DailyDo\Actions;
 
-use Skillcraft\DailyDo\Models\DailyDo;
 use Skillcraft\Core\Models\CoreModel;
+use Skillcraft\DailyDo\Models\DailyDo;
 use Skillcraft\DailyDo\Supports\DailyDoManager;
 
 class SyncDailyDoAction
@@ -12,9 +12,9 @@ class SyncDailyDoAction
     {
         if (DailyDoManager::isSupported($model)) {
             $get_tasks = $model->getDailyDoTasks();
-               
-            if (sizeOf($get_tasks) > 0) {
-                foreach ($get_tasks as $key => $value) {
+
+            if (sizeof($get_tasks) > 0) {
+                foreach ($get_tasks as $value) {
                     if ($isDelete) {
                         /**
                          * TODO: Implement better way to delete the correct records.

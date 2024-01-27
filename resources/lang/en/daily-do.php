@@ -14,5 +14,5 @@ return [
         'complete_task' => 'Mark as completed',
         'is_completed' => 'Completed',
         'due_date' => 'Date Due',
-    ]
+    ],
 ];
