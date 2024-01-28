@@ -3,12 +3,13 @@
 namespace Skillcraft\DailyDo\Models;
 
 use Botble\Base\Casts\SafeContent;
+use Botble\Base\Models\BaseQueryBuilder;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Skillcraft\Core\Models\CoreModel;
 
 /**
- * @method static \Botble\Base\Models\BaseQueryBuilder<static> query()
+ * @method static BaseQueryBuilder<static> query()
  */
 class DailyDo extends CoreModel
 {

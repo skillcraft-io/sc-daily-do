@@ -21,9 +21,9 @@ This plugin was developed to address the need for a streamlined daily task manag
 **Install via Admin Panel**
 
 - Important:
-  "You need to disable the "Daily Do" plugin if previously installed. This re-release of the plugin has renmaed the folder to "sc-daily-do". 
+  "You need to disable the "Daily Do" plugin if previously installed. This re-release of the plugin has renamed the folder to "sc-daily-do". 
   
-  ##Do not use## the plugins remove button fromt he admin area, manually remove the folder and contents directly from the server. If you do not have any data, you can use the remove button.
+  ##Do not use## the plugins remove button from the admin area, manually remove the folder and contents directly from the server. If you do not have any data, you can use the remove button.
 
 Go to the **Admin Panel** and click on the **Plugins** tab. Click on the "Add new" button, find the **Daily Dos** plugin and click on the "Install" button.
 

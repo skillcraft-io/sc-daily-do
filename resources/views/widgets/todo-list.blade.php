@@ -7,10 +7,10 @@
                 <x-core::table.header.cell>
                     {{ trans('core/base::tables.title') }}
                 </x-core::table.header.cell>
-                <x-core::table.header.cell class="text-end">
+                <x-core::table.header.cell class="text-center">
                     {{ trans('core/base::tables.description') }}
                 </x-core::table.header.cell>
-                <x-core::table.header.cell class="text-end">
+                <x-core::table.header.cell class="text-center">
                     {{ trans('plugins/sc-daily-do::daily-do.tables.due_date') }}
                 </x-core::table.header.cell>
             </x-core::table.header>

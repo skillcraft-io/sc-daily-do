@@ -2,6 +2,8 @@
 
 All notable changes to the Daily Do plugin will be documented in this file, from latest change to the oldest.
 
+## [1.0.1] - 2023-01-26
+- [Enhancement] - Adjust widget text alignment
 
 ## [1.0.0] - 2023-01-18
 

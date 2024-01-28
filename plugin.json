@@ -5,7 +5,7 @@
     "provider": "Skillcraft\\DailyDo\\Providers\\DailyDoServiceProvider",
     "author": "William Troiano",
     "url": "https://github.com/skillcraft-io",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "minimum_core_version": "7.0.0",
     "description": "Simple Daily Do Checklist with Module Hook.",
     "require": ["skillcraft/sc-core"]
